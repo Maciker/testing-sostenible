@@ -3,7 +3,7 @@ export function camelcase(phrase: string) {
         return word.charAt(0).toUpperCase() + word.slice(1);
     }
 
-    const splitPhrase = phrase.split(" ")
+    const splitPhrase = phrase.split(/[ _-]/)
 
     if (splitPhrase.length === 1) {
         return wordInCamelCase(phrase);
