@@ -5,12 +5,5 @@ export function camelcase(phrase: string) {
 
     const splitPhrase = phrase.split(/[ _-]/)
 
-    if (splitPhrase.length === 1) {
-        return wordInCamelCase(phrase);
-    }
-    if (splitPhrase.length > 1) {
-        const camelCasePhrase = splitPhrase.map( word => wordInCamelCase(word))
-        return camelCasePhrase.join((""))
-    }
-    return ""
+    return splitPhrase.map( word => wordInCamelCase(word)).join((''))
 }
