@@ -1,14 +1,14 @@
 export const fizzBuzz = (value:number) => {
-    const isDivisible = (divisor:number)  => {
+    const isDivisibleBy = (divisor:number)  => {
         return value % divisor === 0
     }
-    if (isDivisible(15)) {
+    if (isDivisibleBy(15)) {
         return "fizzbuzz"
     }
-    if (isDivisible(5)) {
+    if (isDivisibleBy(5)) {
         return "buzz"
     }
-    if (isDivisible(3)) {
+    if (isDivisibleBy(3)) {
         return "fizz"
     }
 
