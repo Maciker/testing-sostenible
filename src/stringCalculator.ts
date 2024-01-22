@@ -1,12 +1,12 @@
-export const stringCalculator = (value: string) => {
-    if (value === null || value === '') {
+export const stringCalculator = (expression: string) => {
+    if (expression === null || expression === '') {
         return 0
     }
-    if (value.length === 1) {
-        return Number(value)
+    if (expression.length === 1) {
+        return Number(expression)
     } else {
-        const separator = value[0] === '/' ? value[1] : ','
-        const listOfChars = value[0] === '/' ? value.slice(3) : value
+        const separator = expression[0] === '/' ? expression[1] : ','
+        const listOfChars = expression[0] === '/' ? expression.slice(3) : expression
         const numbers = listOfChars.split((separator)).map(item => Number(item))
         return numbers.filter(number => !isNaN(number)).reduce((result, currentValue)=> result + currentValue)
     }
