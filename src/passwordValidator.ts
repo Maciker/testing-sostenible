@@ -3,12 +3,9 @@ export const passwordValidator = (password: string) => {
     const passwordContainsCapitalLetter = (password:string) =>/[A-Z]/.test(password)
     const passwordContainsLowerCaseLetter = (password:string) => /[a-z]/.test(password)
     const passwordContainsUnderscore = (password:string) => /_/.test(password)
-    if (password.length > 5
-        && passwordContainsNumbers(password)
+    return password.length > 5 
+        && passwordContainsNumbers(password) 
         && passwordContainsCapitalLetter(password)
         && passwordContainsLowerCaseLetter(password)
-        && passwordContainsUnderscore(password)){
-        return true
-    }
-    return false
+        && passwordContainsUnderscore(password);
 }
