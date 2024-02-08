@@ -9,4 +9,5 @@ describe('WordWrap Tests', () => {
     });
     it('trim a line by the line length', () => {
         expect(wordWrap('longword', 4)).toEqual('long\nword')
+        expect(wordWrap('reallylongword', 4)).toEqual('real\nlylo\nngwo\nrd')
     });
