@@ -1,3 +1,5 @@
 export const wordWrap = (words: string, lineLength: number) => {
-    return null
+    if (words.length <= lineLength) {
+        return words
+    }
 }
