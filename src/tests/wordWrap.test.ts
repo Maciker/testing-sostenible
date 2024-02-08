@@ -6,5 +6,7 @@ describe('WordWrap Tests', () => {
     });
     it('should return the word if the word length is less than the line length', () => {
         expect(wordWrap('hello', 5)).toEqual('hello')
-    })
-})
+    });
+    it('trim a line by the line length', () => {
+        expect(wordWrap('longword', 4)).toEqual('long\nword')
+    });
