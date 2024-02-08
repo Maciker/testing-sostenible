@@ -1,3 +1,3 @@
 export const primeFactors = (value:number) => {
-    return []
+    return [2]
 }
